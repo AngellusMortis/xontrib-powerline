@@ -178,7 +178,7 @@ def prompt_builder(var, right=False):
                     p.append('{BACKGROUND_%s}' % sec.bg)
                 p.append('{%s}%s' % (sec.fg, sec.line))
                 if last:
-                    p.append('{NO_COLOR}{%s}%s{NO_COLOR} ' % (sec.bg, $PL_SEP))
+                    p.append('{RESET}{%s}%s{RESET} ' % (sec.bg, $PL_SEP))
                 else:
                     p.append('{BACKGROUND_%s}{%s}%s' % (sections[i+1].bg, sec.bg, $PL_SEP))
         return ''.join(p)
